@@ -6,7 +6,7 @@ public class Album {
     private String artist;
     private ArrayList<Song> songs;
 
-    public Album(String name, String artist, ArrayList<Song> songs) {
+    public Album(String name, String artist) {
         this.name = name;
         this.artist = artist;
         this.songs = new ArrayList<Song>();
@@ -26,10 +26,10 @@ public class Album {
     public boolean addSong( String title, double duration){
         if(findSong(title) == null){
             songs.add(new Song(title,duration));
-            System.out.println(title + " successfully added to the list");
+       //     System.out.println(title + " successfully added to the list");
             return true;
         }else {
-            System.out.println("Song with name " + title + "already exist in the list");
+        //    System.out.println("Song with name " + title + "already exist in the list");
             return false;
         }
     }
@@ -40,7 +40,7 @@ public class Album {
             PlayList.add(this.songs.get(index));
                 return true;
             }else {
-            System.out.println("this album does not have song with tracknumber" + trackNumber);
+          //  System.out.println("this album does not have song with tracknumber" + trackNumber);
             return false;
             }
         }
@@ -51,7 +51,7 @@ public class Album {
                 return true;
             }
         }
-        System.out.println(title + "there is no such title in album");
+       // System.out.println(title + "there is no such title in album");
         return false;
     }
 }
